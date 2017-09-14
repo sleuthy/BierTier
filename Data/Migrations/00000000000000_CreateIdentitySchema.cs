@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace biertier.Data.Migrations
+namespace BierTier.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using biertier.Data;
-using biertier.Models;
-using biertier.Services;
+using BierTier.Data;
+using BierTier.Models;
+using BierTier.Services;
 
-namespace biertier
+namespace BierTier
 {
     public class Startup
     {

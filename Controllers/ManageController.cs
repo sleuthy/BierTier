@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using biertier.Models;
-using biertier.Models.ManageViewModels;
-using biertier.Services;
+using BierTier.Models;
+using BierTier.Models.ManageViewModels;
+using BierTier.Services;
 
-namespace biertier.Controllers
+namespace BierTier.Controllers
 {
     [Authorize]
     public class ManageController : Controller
