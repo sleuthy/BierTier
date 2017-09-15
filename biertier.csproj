@@ -1,15 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <UserSecretsId>aspnet-BierTier-5A81BB52-2088-4D40-A275-F586AB65BECC</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <None Update="BierTier.db" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.5.357" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="1.1.2" />
@@ -26,20 +24,14 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
     <PackageReference Include="Microsoft.Composition" Version="1.0.30" ExcludeAssets="All" />
     <PackageReference Include="System.Composition" Version="1.0.31" />
-
   </ItemGroup>
-
-  <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
-    <Exec Command="dotnet bundle" />
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
   </Target>
   <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
-    <Exec Command="bower install" />
-  </Target> -->
-
+  </Target>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.1" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.1" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
-
 </Project>

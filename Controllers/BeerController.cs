@@ -1,24 +1,32 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BierTier.Data;
 using BierTier.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.IO;
+using System.Reflection;
+using System.Xml.Linq;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
-namespace biertier.Controllers
+namespace BierTier.Controllers
 {
     public class BeerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public BeerController(ApplicationDbContext context)
+        public BeerController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;    
         }
 
+        private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
         // GET: Beer
         public async Task<IActionResult> Index()
         {
@@ -41,6 +49,24 @@ namespace biertier.Controllers
             }
 
             return View(beer);
+        }
+
+        // Beer Search Functionality
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var beers = from b in _context.Beer
+                           select b;
+
+            var id = await GetCurrentUserAsync();
+
+    
+            if (!String.IsNullOrEmpty(searchString))
+                {
+                    beers = beers.Where(b => b.Name.Contains(searchString)
+                                           || b.Description.Contains(searchString) && b.User != id);
+                }
+
+            return View(beers.ToList());
         }
 
         // GET: Beer/Create
