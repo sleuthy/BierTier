@@ -1,4 +1,9 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace BierTier.Models
 {
@@ -7,22 +12,19 @@ namespace BierTier.Models
         [Key]
         public int BeerId { get; set; }
 
-        [Required]
         public string Name { get; set; }
         
-        [Required]
         public string Brewery { get; set; }
 
-        [Required]
         public string Description { get; set; }
 
-        [Required]
         public string Type { get; set; }
 
-        [Required]
-        public int ABV { get; set; }
+        public double ABV { get; set; }
 
-        [Required]
         public int IBU { get; set; }
+
+        public string Image { get; set; }
+
     }
 }

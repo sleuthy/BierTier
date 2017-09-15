@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using biertier.Data;
-using biertier.Models;
-using biertier.Services;
+using BierTier.Data;
+using BierTier.Models;
+using BierTier.Services;
 
-namespace biertier
+namespace BierTier
 {
     public class Startup
     {
@@ -52,6 +52,9 @@ namespace biertier
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +75,8 @@ namespace biertier
             }
 
             app.UseStaticFiles();
+
+            DBInitializer.Initializer(app.ApplicationServices);
 
             app.UseIdentity();
 

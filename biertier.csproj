@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <UserSecretsId>aspnet-biertier-5A81BB52-2088-4D40-A275-F586AB65BECC</UserSecretsId>
+    <UserSecretsId>aspnet-BierTier-5A81BB52-2088-4D40-A275-F586AB65BECC</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="biertier.db" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="BierTier.db" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +28,13 @@
     <PackageReference Include="System.Composition" Version="1.0.31" />
 
   </ItemGroup>
+
+  <!-- <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <Exec Command="bower install" />
+  </Target> -->
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.1" />

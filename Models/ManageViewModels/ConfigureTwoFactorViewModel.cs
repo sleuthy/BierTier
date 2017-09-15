@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace biertier.Models.ManageViewModels
+namespace BierTier.Models.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace biertier.Models.ManageViewModels
+namespace BierTier.Models.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

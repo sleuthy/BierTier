@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using biertier.Models;
-using biertier.Models.AccountViewModels;
-using biertier.Services;
+using BierTier.Models;
+using BierTier.Models.AccountViewModels;
+using BierTier.Services;
 
-namespace biertier.Controllers
+namespace BierTier.Controllers
 {
     [Authorize]
     public class AccountController : Controller

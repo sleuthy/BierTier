@@ -4,20 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using biertier.Models;
+using Microsoft.EntityFrameworkCore.Metadata;
+using BierTier.Models;
 
-namespace biertier.Data
+namespace BierTier.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
+        { }
+        public DbSet<BierTier.Models.Beer> Beer { get; set; }
+        public DbSet<BierTier.Models.ApplicationUser> ApplicationUser { get; set; }
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-        }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
