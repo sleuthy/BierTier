@@ -95,48 +95,54 @@ namespace biertier.Migrations
 
             modelBuilder.Entity("BierTier.Models.BlacklistBeer", b =>
                 {
-                    b.Property<int>("BeerId")
+                    b.Property<int>("BlackListBeerId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ApplicationUserId");
+                    b.Property<int>("BeerId");
 
-                    b.Property<bool>("IsBlacklisted");
+                    b.Property<string>("UserId");
 
-                    b.HasKey("BeerId");
+                    b.HasKey("BlackListBeerId");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("BeerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("BlacklistBeer");
                 });
 
             modelBuilder.Entity("BierTier.Models.FavoriteBeer", b =>
                 {
-                    b.Property<int>("BeerId")
+                    b.Property<int>("FavoriteBeerId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ApplicationUserId");
+                    b.Property<int>("BeerId");
 
-                    b.Property<bool>("IsFavorited");
+                    b.Property<string>("UserId");
 
-                    b.HasKey("BeerId");
+                    b.HasKey("FavoriteBeerId");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("BeerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("FavoriteBeer");
                 });
 
             modelBuilder.Entity("BierTier.Models.WishlistBeer", b =>
                 {
-                    b.Property<int>("BeerId")
+                    b.Property<int>("WishListBeerId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ApplicationUserId");
+                    b.Property<int>("BeerId");
 
-                    b.Property<bool>("IsWishlisted");
+                    b.Property<string>("UserId");
 
-                    b.HasKey("BeerId");
+                    b.HasKey("WishListBeerId");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("BeerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("WishlistBeer");
                 });
@@ -250,23 +256,38 @@ namespace biertier.Migrations
 
             modelBuilder.Entity("BierTier.Models.BlacklistBeer", b =>
                 {
-                    b.HasOne("BierTier.Models.ApplicationUser")
+                    b.HasOne("BierTier.Models.Beer", "IndivBeer")
                         .WithMany("BlacklistBeers")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("BeerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BierTier.Models.ApplicationUser", "User")
+                        .WithMany("BlacklistBeers")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("BierTier.Models.FavoriteBeer", b =>
                 {
-                    b.HasOne("BierTier.Models.ApplicationUser")
+                    b.HasOne("BierTier.Models.Beer", "IndivBeer")
                         .WithMany("FavoriteBeers")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("BeerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BierTier.Models.ApplicationUser", "User")
+                        .WithMany("FavoriteBeers")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("BierTier.Models.WishlistBeer", b =>
                 {
-                    b.HasOne("BierTier.Models.ApplicationUser")
+                    b.HasOne("BierTier.Models.Beer", "IndivBeer")
                         .WithMany("WishlistBeers")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("BeerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BierTier.Models.ApplicationUser", "User")
+                        .WithMany("WishlistBeers")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

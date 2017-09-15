@@ -24,5 +24,11 @@ namespace BierTier.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+        
+        public DbSet<BierTier.Models.BlacklistBeer> BlacklistBeer { get; set; }
+        
+        public DbSet<BierTier.Models.FavoriteBeer> FavoriteBeer { get; set; }
+        
+        public DbSet<BierTier.Models.WishlistBeer> WishlistBeer { get; set; }
     }
 }

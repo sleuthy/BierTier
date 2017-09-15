@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BierTier.Data;
 using BierTier.Models;
 
-namespace BierTier.Controllers
+namespace biertier.Controllers
 {
     public class BeerController : Controller
     {
