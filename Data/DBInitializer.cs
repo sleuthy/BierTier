@@ -34,6 +34,18 @@ namespace BierTier.Data
 
                     new Beer()
                     {
+                        Name = "West Coast IPA",
+                        Brewery = "Green Flash",
+                        Description = "Assertive, grapefruit zest bitterness supported by notes of dark caramel from British Crystal malt, finishes floral with dry woodsy hop notes.",
+                        Type = "Double IPA",
+                        ABV = 8.1,
+                        IBU = 95,
+                        Image = "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_257984.jpg"
+                       
+                    },
+                    
+                    new Beer()
+                    {
                         Name = "West Coast IPS",
                         Brewery = "Green Flash",
                         Description = "Assertive, grapefruit zest bitterness supported by notes of dark caramel from British Crystal malt, finishes floral with dry woodsy hop notes.",
@@ -43,6 +55,7 @@ namespace BierTier.Data
                         Image = "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_257984.jpg"
                        
                     }
+
                 };
                 foreach(Beer b in beer)
                 {
