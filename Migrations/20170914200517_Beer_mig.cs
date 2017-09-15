@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace biertier.Migrations
+namespace BierTier.Migrations
 {
     public partial class Beer_mig : Migration
     {

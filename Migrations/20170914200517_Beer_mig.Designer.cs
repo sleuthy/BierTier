@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using BierTier.Data;
 
-namespace biertier.Migrations
+namespace BierTier.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20170914200517_Beer_mig")]
