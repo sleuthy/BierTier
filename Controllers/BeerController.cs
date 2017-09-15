@@ -22,7 +22,7 @@ namespace BierTier.Controllers
         // GET: Beer
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Beers.ToListAsync());
+            return View(await _context.Beer.ToListAsync());
         }
 
         // GET: Beer/Details/5
@@ -33,7 +33,7 @@ namespace BierTier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beers
+            var beer = await _context.Beer
                 .SingleOrDefaultAsync(m => m.BeerId == id);
             if (beer == null)
             {
@@ -73,7 +73,7 @@ namespace BierTier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beers.SingleOrDefaultAsync(m => m.BeerId == id);
+            var beer = await _context.Beer.SingleOrDefaultAsync(m => m.BeerId == id);
             if (beer == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace BierTier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beers
+            var beer = await _context.Beer
                 .SingleOrDefaultAsync(m => m.BeerId == id);
             if (beer == null)
             {
@@ -139,15 +139,15 @@ namespace BierTier.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var beer = await _context.Beers.SingleOrDefaultAsync(m => m.BeerId == id);
-            _context.Beers.Remove(beer);
+            var beer = await _context.Beer.SingleOrDefaultAsync(m => m.BeerId == id);
+            _context.Beer.Remove(beer);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
         private bool BeerExists(int id)
         {
-            return _context.Beers.Any(e => e.BeerId == id);
+            return _context.Beer.Any(e => e.BeerId == id);
         }
     }
 }

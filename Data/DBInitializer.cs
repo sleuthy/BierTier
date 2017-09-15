@@ -10,11 +10,11 @@ namespace BierTier.Data
 {
     public static class DBInitializer 
     { 
-        public static void Initialize(IServiceProvider serviceProvider) 
+        public static void Initializer(IServiceProvider serviceProvider) 
         { 
             using (var context = new ApplicationDbContext(serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>())) 
             { 
-                if(context.Beers.Any()) 
+                if(context.Beer.Any()) 
                 { 
                     return; //db is already seeded
                 }
@@ -46,9 +46,9 @@ namespace BierTier.Data
                 };
                 foreach(Beer b in beer)
                 {
-                    context.Beers.Add(b);
+                    context.Add(b);
+                    context.SaveChanges();
                 }
-                context.SaveChanges();
 
             }
         }

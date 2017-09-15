@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using BierTier.Data;
 
-namespace BierTier.Migrations
+namespace biertier.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170914200517_Beer_mig")]
-    partial class Beer_mig
+    [Migration("20170915161156_Fourth")]
+    partial class Fourth
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,11 +31,9 @@ namespace BierTier.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired();
+                    b.Property<string>("FirstName");
 
-                    b.Property<string>("LastName")
-                        .IsRequired();
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -93,7 +91,7 @@ namespace BierTier.Migrations
 
                     b.HasKey("BeerId");
 
-                    b.ToTable("Beers");
+                    b.ToTable("Beer");
                 });
 
             modelBuilder.Entity("BierTier.Models.BlacklistBeer", b =>

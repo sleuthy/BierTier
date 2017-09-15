@@ -52,6 +52,9 @@ namespace BierTier
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +75,8 @@ namespace BierTier
             }
 
             app.UseStaticFiles();
+
+            DBInitializer.Initializer(app.ApplicationServices);
 
             app.UseIdentity();
 

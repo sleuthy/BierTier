@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BierTier.Migrations
+namespace biertier.Migrations
 {
-    public partial class Beer_mig : Migration
+    public partial class Fourth : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,8 +17,8 @@ namespace BierTier.Migrations
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
                     EmailConfirmed = table.Column<bool>(nullable: false),
-                    FirstName = table.Column<string>(nullable: false),
-                    LastName = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
@@ -36,7 +36,7 @@ namespace BierTier.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Beers",
+                name: "Beer",
                 columns: table => new
                 {
                     BeerId = table.Column<int>(nullable: false)
@@ -51,7 +51,7 @@ namespace BierTier.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Beers", x => x.BeerId);
+                    table.PrimaryKey("PK_Beer", x => x.BeerId);
                 });
 
             migrationBuilder.CreateTable(
@@ -284,7 +284,7 @@ namespace BierTier.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Beers");
+                name: "Beer");
 
             migrationBuilder.DropTable(
                 name: "BlacklistBeer");
