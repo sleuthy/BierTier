@@ -10,22 +10,23 @@ using BierTier.Models;
 
 namespace biertier.Controllers
 {
-    public class BeerController : Controller
+    public class BlacklistBeerController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public BeerController(ApplicationDbContext context)
+        public BlacklistBeerController(ApplicationDbContext context)
         {
             _context = context;    
         }
 
-        // GET: Beer
+        // GET: BlacklistBeer
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Beer.ToListAsync());
+            var applicationDbContext = _context.BlacklistBeer.Include(b => b.IndivBeer);
+            return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Beer/Details/5
+        // GET: BlacklistBeer/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +34,42 @@ namespace biertier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beer
-                .SingleOrDefaultAsync(m => m.BeerId == id);
-            if (beer == null)
+            var blacklistBeer = await _context.BlacklistBeer
+                .Include(b => b.IndivBeer)
+                .SingleOrDefaultAsync(m => m.BlackListBeerId == id);
+            if (blacklistBeer == null)
             {
                 return NotFound();
             }
 
-            return View(beer);
+            return View(blacklistBeer);
         }
 
-        // GET: Beer/Create
+        // GET: BlacklistBeer/Create
         public IActionResult Create()
         {
+            ViewData["BeerId"] = new SelectList(_context.Beer, "BeerId", "BeerId");
             return View();
         }
 
-        // POST: Beer/Create
+        // POST: BlacklistBeer/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BeerId,Name,Brewery,Description,Type,ABV,IBU,Image")] Beer beer)
+        public async Task<IActionResult> Create([Bind("BlackListBeerId,BeerId")] BlacklistBeer blacklistBeer)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(beer);
+                _context.Add(blacklistBeer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(beer);
+            ViewData["BeerId"] = new SelectList(_context.Beer, "BeerId", "BeerId", blacklistBeer.BeerId);
+            return View(blacklistBeer);
         }
 
-        // GET: Beer/Edit/5
+        // GET: BlacklistBeer/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +77,23 @@ namespace biertier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beer.SingleOrDefaultAsync(m => m.BeerId == id);
-            if (beer == null)
+            var blacklistBeer = await _context.BlacklistBeer.SingleOrDefaultAsync(m => m.BlackListBeerId == id);
+            if (blacklistBeer == null)
             {
                 return NotFound();
             }
-            return View(beer);
+            ViewData["BeerId"] = new SelectList(_context.Beer, "BeerId", "BeerId", blacklistBeer.BeerId);
+            return View(blacklistBeer);
         }
 
-        // POST: Beer/Edit/5
+        // POST: BlacklistBeer/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BeerId,Name,Brewery,Description,Type,ABV,IBU,Image")] Beer beer)
+        public async Task<IActionResult> Edit(int id, [Bind("BlackListBeerId,BeerId")] BlacklistBeer blacklistBeer)
         {
-            if (id != beer.BeerId)
+            if (id != blacklistBeer.BlackListBeerId)
             {
                 return NotFound();
             }
@@ -97,12 +102,12 @@ namespace biertier.Controllers
             {
                 try
                 {
-                    _context.Update(beer);
+                    _context.Update(blacklistBeer);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BeerExists(beer.BeerId))
+                    if (!BlacklistBeerExists(blacklistBeer.BlackListBeerId))
                     {
                         return NotFound();
                     }
@@ -113,10 +118,11 @@ namespace biertier.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            return View(beer);
+            ViewData["BeerId"] = new SelectList(_context.Beer, "BeerId", "BeerId", blacklistBeer.BeerId);
+            return View(blacklistBeer);
         }
 
-        // GET: Beer/Delete/5
+        // GET: BlacklistBeer/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +130,31 @@ namespace biertier.Controllers
                 return NotFound();
             }
 
-            var beer = await _context.Beer
-                .SingleOrDefaultAsync(m => m.BeerId == id);
-            if (beer == null)
+            var blacklistBeer = await _context.BlacklistBeer
+                .Include(b => b.IndivBeer)
+                .SingleOrDefaultAsync(m => m.BlackListBeerId == id);
+            if (blacklistBeer == null)
             {
                 return NotFound();
             }
 
-            return View(beer);
+            return View(blacklistBeer);
         }
 
-        // POST: Beer/Delete/5
+        // POST: BlacklistBeer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var beer = await _context.Beer.SingleOrDefaultAsync(m => m.BeerId == id);
-            _context.Beer.Remove(beer);
+            var blacklistBeer = await _context.BlacklistBeer.SingleOrDefaultAsync(m => m.BlackListBeerId == id);
+            _context.BlacklistBeer.Remove(blacklistBeer);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-        private bool BeerExists(int id)
+        private bool BlacklistBeerExists(int id)
         {
-            return _context.Beer.Any(e => e.BeerId == id);
+            return _context.BlacklistBeer.Any(e => e.BlackListBeerId == id);
         }
     }
 }

@@ -10,7 +10,9 @@ namespace BierTier.Models
     public class WishlistBeer
     {
         [Key]
+        public int WishListBeerId { get; set; }
         public int BeerId { get; set; }
-        public bool IsWishlisted { get; set; }
+        public ApplicationUser User { get; set; }
+        public Beer IndivBeer { get; set; }
     }
 }

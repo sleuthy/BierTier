@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace biertier.Migrations
 {
-    public partial class Fourth : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -83,66 +83,6 @@ namespace biertier.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BlacklistBeer",
-                columns: table => new
-                {
-                    BeerId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ApplicationUserId = table.Column<string>(nullable: true),
-                    IsBlacklisted = table.Column<bool>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BlacklistBeer", x => x.BeerId);
-                    table.ForeignKey(
-                        name: "FK_BlacklistBeer_AspNetUsers_ApplicationUserId",
-                        column: x => x.ApplicationUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "FavoriteBeer",
-                columns: table => new
-                {
-                    BeerId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ApplicationUserId = table.Column<string>(nullable: true),
-                    IsFavorited = table.Column<bool>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FavoriteBeer", x => x.BeerId);
-                    table.ForeignKey(
-                        name: "FK_FavoriteBeer_AspNetUsers_ApplicationUserId",
-                        column: x => x.ApplicationUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "WishlistBeer",
-                columns: table => new
-                {
-                    BeerId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ApplicationUserId = table.Column<string>(nullable: true),
-                    IsWishlisted = table.Column<bool>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_WishlistBeer", x => x.BeerId);
-                    table.ForeignKey(
-                        name: "FK_WishlistBeer_AspNetUsers_ApplicationUserId",
-                        column: x => x.ApplicationUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
@@ -181,6 +121,84 @@ namespace biertier.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BlacklistBeer",
+                columns: table => new
+                {
+                    BlackListBeerId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    BeerId = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BlacklistBeer", x => x.BlackListBeerId);
+                    table.ForeignKey(
+                        name: "FK_BlacklistBeer_Beer_BeerId",
+                        column: x => x.BeerId,
+                        principalTable: "Beer",
+                        principalColumn: "BeerId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BlacklistBeer_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FavoriteBeer",
+                columns: table => new
+                {
+                    FavoriteBeerId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    BeerId = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FavoriteBeer", x => x.FavoriteBeerId);
+                    table.ForeignKey(
+                        name: "FK_FavoriteBeer_Beer_BeerId",
+                        column: x => x.BeerId,
+                        principalTable: "Beer",
+                        principalColumn: "BeerId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FavoriteBeer_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WishlistBeer",
+                columns: table => new
+                {
+                    WishListBeerId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    BeerId = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WishlistBeer", x => x.WishListBeerId);
+                    table.ForeignKey(
+                        name: "FK_WishlistBeer_Beer_BeerId",
+                        column: x => x.BeerId,
+                        principalTable: "Beer",
+                        principalColumn: "BeerId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_WishlistBeer_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -240,19 +258,34 @@ namespace biertier.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_BlacklistBeer_ApplicationUserId",
+                name: "IX_BlacklistBeer_BeerId",
                 table: "BlacklistBeer",
-                column: "ApplicationUserId");
+                column: "BeerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FavoriteBeer_ApplicationUserId",
+                name: "IX_BlacklistBeer_UserId",
+                table: "BlacklistBeer",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavoriteBeer_BeerId",
                 table: "FavoriteBeer",
-                column: "ApplicationUserId");
+                column: "BeerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WishlistBeer_ApplicationUserId",
+                name: "IX_FavoriteBeer_UserId",
+                table: "FavoriteBeer",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WishlistBeer_BeerId",
                 table: "WishlistBeer",
-                column: "ApplicationUserId");
+                column: "BeerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WishlistBeer_UserId",
+                table: "WishlistBeer",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
@@ -284,9 +317,6 @@ namespace biertier.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Beer");
-
-            migrationBuilder.DropTable(
                 name: "BlacklistBeer");
 
             migrationBuilder.DropTable(
@@ -309,6 +339,9 @@ namespace biertier.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Beer");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

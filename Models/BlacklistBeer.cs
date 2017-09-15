@@ -9,8 +9,10 @@ namespace BierTier.Models
 {
     public class BlacklistBeer
     {
-        [Key]
+       [Key]
+        public int BlackListBeerId { get; set; }
         public int BeerId { get; set; }
-        public bool IsBlacklisted { get; set; }
+        public ApplicationUser User { get; set; }
+        public Beer IndivBeer { get; set; }
     }
 }

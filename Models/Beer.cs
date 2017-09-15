@@ -26,5 +26,9 @@ namespace BierTier.Models
 
         public string Image { get; set; }
 
+        public virtual ICollection<BlacklistBeer> BlacklistBeers { get; set; }
+        public virtual ICollection<FavoriteBeer> FavoriteBeers { get; set; }
+        public virtual ICollection<WishlistBeer> WishlistBeers { get; set; }
+
     }
 }

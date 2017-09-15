@@ -10,7 +10,10 @@ namespace BierTier.Models
     public class FavoriteBeer
     {
         [Key]
+
+        public int FavoriteBeerId { get; set; }
         public int BeerId { get; set; }
-        public bool IsFavorited { get; set; }
+        public ApplicationUser User { get; set; }
+        public Beer IndivBeer { get; set; }
     }
 }
