@@ -27,6 +27,7 @@ namespace BierTier.Controllers
         }
 
         private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
+        
         // GET: Beer
         public async Task<IActionResult> Index()
         {
@@ -51,23 +52,6 @@ namespace BierTier.Controllers
             return View(beer);
         }
 
-        // Beer Search Functionality
-        public async Task<IActionResult> Index(string searchString)
-        {
-            var beers = from b in _context.Beer
-                           select b;
-
-            var id = await GetCurrentUserAsync();
-
-    
-            if (!String.IsNullOrEmpty(searchString))
-                {
-                    beers = beers.Where(b => b.Name.Contains(searchString)
-                                           || b.Description.Contains(searchString) && b.User != id);
-                }
-
-            return View(beers.ToList());
-        }
 
         // GET: Beer/Create
         public IActionResult Create()
@@ -174,6 +158,24 @@ namespace BierTier.Controllers
         private bool BeerExists(int id)
         {
             return _context.Beer.Any(e => e.BeerId == id);
+        }
+        
+        // Beer Search Functionality
+        [ActionName("Search")]
+        public async Task<IActionResult> SearchIndex(string searchString)
+        {
+            var beers = from b in _context.Beer
+                           select b;
+
+            var id = await GetCurrentUserAsync();
+
+    
+            if (!String.IsNullOrEmpty(searchString))
+                {
+                    beers = beers.Where(b => b.Name.Contains(searchString));
+                }
+
+            return View(beers);
         }
     }
 }

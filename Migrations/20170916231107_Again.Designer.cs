@@ -8,8 +8,8 @@ using BierTier.Data;
 namespace biertier.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170915171134_WishlistBeer_mig")]
-    partial class WishlistBeer_mig
+    [Migration("20170916231107_Again")]
+    partial class Again
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
