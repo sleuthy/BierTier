@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BierTier.Data;
 using BierTier.Models;
 
-namespace biertier.Controllers
+namespace BierTier.Controllers
 {
     public class BlacklistBeerController : Controller
     {

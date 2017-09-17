@@ -3,9 +3,22 @@
     padding-bottom: 20px;
 }
 
+h1 {
+    color: lightgrey;
+}
+
+input {
+    width: 100%;
+    color: darkcyan;
+}
+
+btn-primary.raised {
+	box-shadow: 0 3px 0 0 #007299;
+}
+
 .mainhomeview {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     background-image: url("../images/snow-restaurant-mountains-sky.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +27,7 @@
 }
 
 .main-container {
-    width: 500px;
+    max-width: 1000px;
     height: 100px;
 }
 
