@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace biertier.Migrations
 {
-    public partial class Again : Migration
+    public partial class Seriouslyagain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
