@@ -177,7 +177,7 @@ namespace BierTier.Controllers
                                         || b.Type.Contains(searchString));
                 }
 
-            return View(beers.ToList());
+            return View(beers);
         }
     }
 }
