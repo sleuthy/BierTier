@@ -159,7 +159,7 @@ namespace BierTier.Controllers
         {
             return _context.Beer.Any(e => e.BeerId == id);
         }
-        
+
         // Beer Search Functionality
         [ActionName("Search")]
         public async Task<IActionResult> SearchIndex(string searchString)
@@ -172,7 +172,9 @@ namespace BierTier.Controllers
     
             if (!String.IsNullOrEmpty(searchString))
                 {
-                    beers = beers.Where(b => b.Name.Contains(searchString));
+                    beers = beers.Where(b => b.Name.Contains(searchString)
+                                        || b.Brewery.Contains(searchString)
+                                        || b.Type.Contains(searchString));
                 }
 
             return View(beers);

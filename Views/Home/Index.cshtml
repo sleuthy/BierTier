@@ -5,6 +5,14 @@
 <div class="mainhomeview">
     <div class="main-container">
         <h1>Search for a beer.</h1>
+        <!-- Search input box-->
+        <!-- Search by title, brewery, or type. Logic written in BeerController.cs-->
+            @using (Html.BeginForm())
+            {
+            @Html.TextBox("searchString")
+                <p style="display:inline; color:lightgrey">Search by name, brewery, or type of beer.</p>
+                <input asp-area="" asp-controller="Beer" asp-action="Index" type="submit" value="Search" />
+            }
     </div>
 </div>
 
