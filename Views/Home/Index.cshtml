@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<BierTier.Models.Beer>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -12,7 +14,7 @@
             @Html.TextBox("SearchString")
                 <span><p style="display:inline; color:lightgrey"><br></p>
                 </span><br>
-                <input asp-area="" asp-controller="Beer" asp-action="Index" type="submit" value="Search" button type="button" class="btn btn-primary btn-lg" />
+                <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" value="Search" button type="button" class="btn btn-primary btn-lg" />
             }
     </div>
 </div>

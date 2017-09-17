@@ -16,6 +16,10 @@ btn-primary.raised {
 	box-shadow: 0 3px 0 0 #007299;
 }
 
+.resultsbutton {
+    padding: 10px 10px;
+}
+
 .mainhomeview {
     padding-top: 50px;
     padding-bottom: 10px;
