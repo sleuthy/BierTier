@@ -9,7 +9,7 @@
         <!-- Search by title, brewery, or type. Logic written in BeerController.cs-->
             @using (Html.BeginForm())
             {
-            @Html.TextBox("searchString")
+            @Html.TextBox("SearchString")
                 <span><p style="display:inline; color:lightgrey"><br></p>
                 </span><br>
                 <input asp-area="" asp-controller="Beer" asp-action="Index" type="submit" value="Search" button type="button" class="btn btn-primary btn-lg" />
