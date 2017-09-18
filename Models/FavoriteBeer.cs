@@ -15,5 +15,6 @@ namespace BierTier.Models
         public int BeerId { get; set; }
         public ApplicationUser User { get; set; }
         public Beer IndivBeer { get; set; }
+
     }
 }

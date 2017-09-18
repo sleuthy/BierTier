@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Xml.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using BierTier.Models.AppViewModels;
 
 namespace BierTier.Controllers
 {
@@ -64,15 +65,26 @@ namespace BierTier.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BeerId,Name,Brewery,Description,Type,ABV,IBU,Image")] Beer beer)
+        public async Task<IActionResult> SaveBeer(FavOrWishBeerViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            var id = await GetCurrentUserAsync();
+
+            if (viewModel.BeerChoice == "Add to Favorites")
             {
-                _context.Add(beer);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                FavoriteBeer beerToAdd = new FavoriteBeer(){
+                    BeerId = viewModel.BeerToSaveId,
+                    User = id
+                };
+                    _context.Add(beerToAdd);
+                    await _context.SaveChangesAsync();
             }
-            return View(beer);
+            return RedirectToAction ("FavoriteBeer");
+        }
+
+         public async Task<IActionResult> FavoriteBeer()
+        {
+            var beers = await _context.FavoriteBeer.Include("IndivBeer").ToListAsync();
+            return View (beers);
         }
 
         // GET: Beer/Edit/5
@@ -164,20 +176,22 @@ namespace BierTier.Controllers
         [ActionName("Search")]
         public async Task<IActionResult> SearchIndex(string searchString)
         {
-            var beers = from b in _context.Beer
-                           select b;
+            FavOrWishBeerViewModel viewModel = new FavOrWishBeerViewModel();
+
+            viewModel.Beers = (from b in _context.Beer
+                           select b).ToList();
 
             var id = await GetCurrentUserAsync();
 
     
             if (!String.IsNullOrEmpty(searchString))
                 {
-                    beers = beers.Where(b => b.Name.Contains(searchString)
+                    viewModel.Beers = viewModel.Beers.Where(b => b.Name.Contains(searchString)
                                         || b.Brewery.Contains(searchString)
-                                        || b.Type.Contains(searchString));
+                                        || b.Type.Contains(searchString)).ToList();
                 }
 
-            return View(beers);
+            return View(viewModel);
         }
     }
 }
