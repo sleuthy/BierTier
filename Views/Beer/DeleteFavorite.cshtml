@@ -1,14 +1,13 @@
 @model BierTier.Models.FavoriteBeer
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "DeleteFavorite";
 }
 
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>FavoriteBeer</h4>
     <hr />
     <dl class="dl-horizontal">
         <input type="hidden" asp-for="FavoriteBeerId" />
@@ -20,10 +19,10 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
+    <form asp-action="DeleteFavorite">
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
+            <input type="submit" value="DeleteFavorite" class="btn btn-default btn-sm btn-danger" />
+            <a asp-action="FavoriteBeer">Back to List</a>
         </div>
     </form>
 </div>
