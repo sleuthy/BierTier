@@ -188,6 +188,17 @@ namespace BierTier.Controllers
             return RedirectToAction("Index");
         }
 
+        // POST: Beer/DeleteFavorite/5
+        [HttpPost, ActionName("DeleteFavorite")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteFavoriteConfirmed(int id)
+        {
+            var beer = await _context.FavoriteBeer.SingleOrDefaultAsync(m => m.FavoriteBeerId == id);
+            _context.FavoriteBeer.Remove(beer);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("FavoriteBeer");
+        }
+
         private bool BeerExists(int id)
         {
             return _context.Beer.Any(e => e.BeerId == id);
