@@ -24,7 +24,7 @@
                 @Html.DisplayFor(modelItem => item.IndivBeer.Brewery)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.WishListBeerId">Details</a> |
+                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-md resultsbutton">Details</a></p>
                 <a asp-action="Delete" asp-route-id="@item.WishListBeerId">Delete</a>
             </td>
         </tr>
