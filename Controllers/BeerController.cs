@@ -61,8 +61,8 @@ namespace BierTier.Controllers
         }
 
         // POST: Beer/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Add beer to Favorites or Wishlist
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SaveBeer(FavOrWishBeerViewModel viewModel)
@@ -79,12 +79,29 @@ namespace BierTier.Controllers
                     await _context.SaveChangesAsync();
             }
             return RedirectToAction ("FavoriteBeer");
+
+            else if (viewModel.BeerChoice == "Add to Wishlist")
+            {
+                WishlistBeer beerToAdd = new WishlistBeer(){
+                    BeerId = viewModel.BeerToSaveId,
+                    User = id
+                };
+                    _context.Add(beerToAdd);
+                    await _context.SaveChangesAsync();
+            }
+            return RedirectToAction ("WishlistBeer");
         }
 
          public async Task<IActionResult> FavoriteBeer()
         {
             var beers = await _context.FavoriteBeer.Include("IndivBeer").ToListAsync();
             return View (beers);
+        }
+
+        public async Task<IActionResult> WishlistBeer()
+        {
+            var wishbeers = await _context.WishlistBeer.Include("IndivBeer").ToListAsync();
+            return View (wishbeers);
         }
 
         // GET: Beer/Edit/5

@@ -1,10 +1,10 @@
-@model IEnumerable<BierTier.Models.FavoriteBeer>
+@model IEnumerable<BierTier.Models.WishlistBeer>
 
 @{
-    ViewData["Title"] = "FavoriteBeer";
+    ViewData["Title"] = "Index";
 }
 
-<h2>My Favorite Beers</h2>
+<h2>My Wishlist</h2>
 
 <table class="table">
     <thead>
@@ -24,8 +24,8 @@
                 @Html.DisplayFor(modelItem => item.IndivBeer.Brewery)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.FavoriteBeerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.FavoriteBeerId">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.WishlistBeerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.WishlistBeerId">Delete</a>
             </td>
         </tr>
 }
