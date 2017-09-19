@@ -77,9 +77,11 @@ namespace BierTier.Controllers
                 };
                     _context.Add(beerToAdd);
                     await _context.SaveChangesAsync();
-            }
-            return RedirectToAction ("FavoriteBeer");
 
+            return RedirectToAction ("FavoriteBeer");
+            
+            }
+        
             else if (viewModel.BeerChoice == "Add to Wishlist")
             {
                 WishlistBeer beerToAdd = new WishlistBeer(){
@@ -88,8 +90,10 @@ namespace BierTier.Controllers
                 };
                     _context.Add(beerToAdd);
                     await _context.SaveChangesAsync();
-            }
+
             return RedirectToAction ("WishlistBeer");
+            }
+            return View ("Index");
         }
 
          public async Task<IActionResult> FavoriteBeer()

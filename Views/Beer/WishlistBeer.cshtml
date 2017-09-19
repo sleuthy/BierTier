@@ -1,7 +1,7 @@
 @model IEnumerable<BierTier.Models.WishlistBeer>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "WishlistBeer";
 }
 
 <h2>My Wishlist</h2>
@@ -24,8 +24,8 @@
                 @Html.DisplayFor(modelItem => item.IndivBeer.Brewery)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.WishlistBeerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.WishlistBeerId">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.WishListBeerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.WishListBeerId">Delete</a>
             </td>
         </tr>
 }
