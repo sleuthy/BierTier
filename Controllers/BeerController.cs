@@ -236,5 +236,12 @@ namespace BierTier.Controllers
 
             return View(viewModel);
         }
+
+        // Beer Recommendations Functionality
+        [ActionName("RecommendBeer")]
+        public async Task<IActionResult> Recommend(string recommendString)
+        {
+            if ()
+        }
     }
 }

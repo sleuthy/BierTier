@@ -57,8 +57,12 @@
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post">
                 <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-default">
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-default">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary">
+            </form>
+            <form asp-controller="Beer" asp-action="RecommendBeer" method="post">
+                <input type="hidden" asp-form="@Model.BeerToSaveId" value="@item.BeerId" />
+                <input type="submit" asp-for="@Model.BeerChoice" value="See Similar Beers!" class="btn btn-primary">
             </form>
             </td>
         </tr> 
