@@ -4,7 +4,7 @@
     ViewData["Title"] = "Search";
 }
 <!-- Search logic in BeerController.cs -->
-<h3>Find a beer.</h3>
+<h3 class="findtext">Find a beer.</h3>
 <br>
 
 @using (Html.BeginForm())
@@ -19,7 +19,6 @@
 
 @if(Model.Beers.Count() > 0)
 {
-    <h3>Search Results</h3>
     <table class="table">
         <thead>
             <tr>
@@ -57,12 +56,12 @@
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post">
                 <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary">
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary addbuttons">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
             </form>
             <form asp-controller="Beer" asp-action="RecommendBeer" method="post">
                 <input type="hidden" asp-form="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit" asp-for="@Model.BeerChoice" value="See Similar Beers!" class="btn btn-primary">
+                <input type="submit" asp-for="@Model.BeerChoice" value="See Similar Beers!" class="btn btn-primary similarbutton">
             </form>
             </td>
         </tr> 

@@ -238,10 +238,10 @@ namespace BierTier.Controllers
         }
 
         // Beer Recommendations Functionality
-        [ActionName("RecommendBeer")]
-        public async Task<IActionResult> Recommend(string recommendString)
-        {
-            if ()
-        }
+        // [ActionName("RecommendBeer")]
+        // public async Task<IActionResult> Recommend(string recommendString)
+        // {
+        //     if ()
+        // }
     }
 }
