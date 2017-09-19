@@ -306,7 +306,469 @@ namespace BierTier.Data
                         ABV = 10.0,
                         IBU = 22,
                         Image = "https://s3.amazonaws.com/beertourprod/beers/pictures/000/000/073/original/St_Bernardus_Abt_12_900.jpg?1395129181"
-                    }
+                    },
+                    
+                     new Beer()
+                    {
+                        Name = "Trappistes Rochefort 10",
+                        Brewery = "Brasserie de Rochefort",
+                        Description = "The top product from the Rochefort Trappist brewery. Dark color, full and very impressive taste. Strong plum, raisin, and black currant palate, with ascending notes of vinousness and other complexities.",
+                        Type = "Quadrupel (Quad)",
+                        ABV = 11.3,
+                        IBU = 27,
+                        Image = "https://s3.amazonaws.com/beertourprod/beers/pictures/000/000/064/original/Rochefort_10_trappist_beer_900.jpg.jpg?1391077043"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Samuel Adams Boston Lager",
+                        Brewery = "Boston Beer Company (Samuel Adams)",
+                        Description = "Samuel Adams Boston Lager helped lead the American beer revolution, reviving a passion for full-bodied brews that are robust and rich with character. Since 1984, Samuel Adams Boston Lager has used only the finest hand-selected ingredients to create this perfectly balanced, complex and full-bodied original brew.",
+                        Type = "Vienna Lager",
+                        ABV = 4.9,
+                        IBU = 30,
+                        Image = "http://www.betterondraft.com/wp-content/uploads/2016/06/SABL_TBS-product-images-2013.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "A Little Sumpin' Sumpin' Ale",
+                        Brewery = "Lagunitas Brewing Company",
+                        Description = "Way smooth and silky with a nice wheaty-esque-ish-ness. Just the little sumpin’ sumpin’ we all need to kick Summer into full swing! Ingredients: Hops, Malt, Hops, Hops, Yeast, Hops, Water, and Hops.",
+                        Type = "American Pale Wheat Ale",
+                        ABV = 7.5,
+                        IBU = 65,
+                        Image = "https://365beers.files.wordpress.com/2010/08/lagunitas-little-sumpin-ale.jpg?w=470"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Lagunitas IPA",
+                        Brewery = "Lagunitas Brewing Company",
+                        Description = "Thanks for choosing to spend the next few minutes with this special homicidally hoppy ale. Savor the moment as the raging hop character engages the Imperial Qualities of the Malt Foundation in mortal combat on the battlefield of your palate!",
+                        Type = "American IPA",
+                        ABV = 6.2,
+                        IBU = 46,
+                        Image = "http://s3.media.squarespace.com/production/840157/9867282/_zikSxOpljDc/S3lNc9cnuHI/AAAAAAAAAY8/a1dU522Ut_s/s320/lagunitis+IPA.JPG"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Fat Tire Amber Ale",
+                        Brewery = "New Belgium Brewing",
+                        Description = "Fat Tire’s unique flavor profile originates from the late 1930s, when local Belgian breweries aimed to satisfy the tastes of visiting British soldiers. English floral hops, subtle malt sweetness and spicy, fruity notes from Belgian yeast made for a balanced yet magical combination. These same characteristics are at the heart of Fat Tire. Classified as an Ameri-Belgo style ale by the revered Great American Beer Festival and World Beer Cup competitions, Fat Tire blends a fine malt presence, fresh herbal hop balance and a touch of fruity yeast to offer drinkers everywhere a timeless craft beer experience with a rare blend of balance and complexity.",
+                        Type = "American Amber / Red Ale",
+                        ABV = 5.2,
+                        IBU = 22,
+                        Image = "http://whichbeerglass.com/wp-content/uploads/2017/02/NewBelgiumFatTireAmberAle-212x300.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Nugget Nectar",
+                        Brewery = "Tröegs Brewing Company",
+                        Description = "Squeeze those hops for all they're worth and prepare to pucker up: Nugget Nectar Ale, will take hopheads to nirvana with a heady collection of Nugget, Warrior and Tomahawk hops. Starting with the same base ingredients of our flagship HopBack Amber Ale, Nugget Nectar intensifies the malt and hop flavors to create an explosive hop experience.",
+                        Type = "American Amber / Red Ale",
+                        ABV = 7.5,
+                        IBU = 93,
+                        Image = "http://www.troegs.com/wp-content/uploads/2015/08/nugget-productshot-new.png"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Stone Imperial Russian Stout",
+                        Brewery = "Stone Brewing",
+                        Description = "Brewed in the authentic historical style of an Imperial Russian Stout, this ale is massive. Intensely aromatic (notes of anise, lack currants, coffee, roastiness and alcohol) and heavy on the palate, this brew goes where few can --- and fewer dare even try. The style originated from Czarist Russia's demand for ever thicker English stouts. Expect our version of this mysterious brew to pour like Siberian crude and taste even heavier!",
+                        Type = "Russian Imperial Stout",
+                        ABV = 10.6,
+                        IBU = 60,
+                        Image = "https://i.pinimg.com/236x/6c/bc/3f/6cbc3f7422ec49c1f3abe4338e104bb3--homebrewing-craft-beer.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Weihenstephaner Hefeweissbier",
+                        Brewery = "Bayerische Staatsbrauerei Weihenstephan",
+                        Description = "Our golden-yellow wheat beer, with its fine-poured white foam, smells of cloves and impresses consumers with its refreshing banana flavour. It is full bodied and with a smooth yeast taste. To be enjoyed at any time,goes excellently with fish and seafood, with spicy cheese and especially with the traditional Bavarian veal sausage. Brewed according to our centuries-old brewing tradition on the Weihenstephan hill.",
+                        Type = "Hefeweizen",
+                        ABV = 5.4,
+                        IBU = 14,
+                        Image = "https://www.weihenstephaner.de/fileadmin/user_upload/Dropdown/Sortiment/hefeweissbier.png"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Paulaner Hefe-Weißbier Naturtrüb",
+                        Brewery = "Paulaner Brauerei GmbH & Co. KG",
+                        Description = "The no. 1 Hefe-Weißbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weißbier classic has a mild aroma of banana. Finer palates detect a trace of mango and pineapple and the balance between sweet and bitter. Beer connoisseurs appreciate the fine note of yeast and the mild but sparkling mix of aromas. It is a typical beergarden beer, which brings people together all over the world.",
+                        Type = "Hefeweizen",
+                        ABV = 5.5,
+                        IBU = 12,
+                        Image = "https://www.paulaner.com/sites/default/files/images/produkte/hwb_glas.png"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Franziskaner Hefe-Weissbier / Weissbier Naturtrub",
+                        Brewery = "Spaten-Franziskaner-Bräu",
+                        Description = "The original fresh wheat beer taste. Franziskaner Hefe-Weißbier Naturtrüb is a natural and elegant Weissbier from Bavaria with a lush white foam. The copper golden wheat beer unfolds with an aromatic fragrance and harmonious banana and citrus fruits.",
+                        Type = "Hefeweizen",
+                        ABV = 5.0,
+                        IBU = 12,
+                        Image = "https://beergatherer.files.wordpress.com/2012/02/franziskaner_weisse.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Bell's Oberon Ale",
+                        Brewery = "Bell's Brewery, Inc.",
+                        Description = "Bell's Oberon is a wheat ale fermented with Bell's signature house ale yeast, mixing a spicy hop character with mildly fruity aromas. The addition of wheat malt lends a smooth mouthfeel, making it a classic summer beer.",
+                        Type = "American Pale Wheat Ale",
+                        ABV = 5.8,
+                        IBU = 10,
+                        Image = "https://www.bellsbeer.com/sites/default/files/brands/Oberon_WebPic_736X736.png"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "312 Urban Wheat",
+                        Brewery = "Goose Island Beer Co.",
+                        Description = "Crisp, bright flavor shines like city lights on Lake Michigan. Hazy and unfiltered, our award-winning Urban Wheat Ale's flavor flows from start to finish.",
+                        Type = "American Pale Wheat Ale",
+                        ABV = 4.2,
+                        IBU = 18,
+                        Image = "https://www.handfamilycompanies.com/filebin/images/product_images/Goose-312_wheat.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Dale's Pale Ale",
+                        Brewery = "Oskar Blues Brewery",
+                        Description = "This voluminously hopped mutha delivers a hoppy nose and assertive-but-balanced flavors of pale malts and citrusy floral hops from start to finish. Oskar Blues launched its canning ops in 2002, brewing and hand-canning Dale’s Pale Ale in the Lyons, Colorado, brewpub. America’s first-craft-canned mountain pale is a hearty, critically acclaimed trailblazer that changed the way craft beer fiends perceive portable beer.",
+                        Type = "American Pale Ale",
+                        ABV = 6.5,
+                        IBU = 65,
+                        Image = "https://aleheads.files.wordpress.com/2010/03/dales-pale-ale.jpg"
+                    },
+                   
+                    new Beer()
+                    {
+                        Name = "Cutaway IPA",
+                        Brewery = "Tennessee Brew Works",
+                        Description = "For beer lovers who stretch beyond the 12th fret, our well balanced RYE IPA strums with an obvious bouquet of grapefruit, tangerine and orange harmonies. For hop enthusiasts of all varieties, this headliner gets folks asking for encores daily.",
+                        Type = "American IPA",
+                        ABV = 6.0,
+                        IBU = 70,
+                        Image = "http://knoxbrewnews.com/images/tennesseebrewworks_cutawayipa.jpg?crc=3774922129"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Southern Wit",
+                        Brewery = "Tennessee Brew Works",
+                        Description = "If we had a frontman to our band of beers, it would be our Southern Wit. A Tennessee native with a charasmatic, citrusy way of introducing itself, this unfiltered Belgian white ale packs venues with its high notes of tangerine, pear and honey!",
+                        Type = "Witbier",
+                        ABV = 5.15,
+                        IBU = 15,
+                        Image = "https://lh3.googleusercontent.com/-LMIM6R1wo8Y/WLI2EKsFD7I/AAAAAAAAM9I/THWQqoovr28/s1600/IMG_20170225_193602-01.jpeg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Basil Ryeman",
+                        Brewery = "Tennessee Brew Works",
+                        Description = "This creamy and spicy farmhouse ale has been making a Grand Ole splash since it hit the beer scene. The thai basil, sourced from Bloombury Farms, and rye malts take center stage; offering complexity while remaining approachable. One can taste a variety of notes, with tones of pepper and fennel on the nose and pallate.",
+                        Type = "Saison / Farmhouse Ale",
+                        ABV = 8.0,
+                        IBU = 28,
+                        Image = "https://pbs.twimg.com/media/C7KuPUiU4AEB1Zg.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Extra Easy",
+                        Brewery = "Tennessee Brew Works",
+                        Description = "There are few brews that accentuate Tennessee livin' like our ESB. When one starts to sip this malt forward beer, with tones of apricots, peaches, plums, and caramel, you'll want to relax and appreciate the moment. So, listen to your heart, kick back with your family and friends, and treat yourself to a few of this fine craft beer.",
+                        Type = "Extra Special / Strong Bitter (ESB)",
+                        ABV = 5.25,
+                        IBU = 39,
+                        Image = "https://vignette2.wikia.nocookie.net/beer/images/5/53/TNBrewWorksExtraEasy.png/revision/latest?cb=20160912180555"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Sue",
+                        Brewery = "Yazoo Brewing Company",
+                        Description = "The south is famous for smoking everything. Why not beer? Sue is a big, rich, smoky malt bomb of a beer, with mellow smokiness coming from barley malts smoked with cherry wood, and assertive bitterness from Galena and Perle hops to cleanse the finish",
+                        Type = "Baltic Porter",
+                        ABV = 9.0,
+                        IBU = 72,
+                        Image = "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/19764507_447458042283122_6385977192119009280_n.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Dos Perros",
+                        Brewery = "Yazoo Brewing Company",
+                        Description = "Many Mexican beer styles today are descendants of old Austrian styles, from when Austria ruled Mexico in the late 19th century. Our Dos Perros is made with German Munich malt, English Pale malt, and Chocolate malt, and hopped with Perle and Saaz hops. To lighten the body, as many Mexican brewers do, we add a small portion of flaked maize. The result is a wonderfully bready malt aroma, balanced with some maize sweetness and a noble hop finish.",
+                        Type = "American Brown Ale",
+                        ABV = 3.5,
+                        IBU = 21,
+                        Image = "http://blogaboutbeer.com/wp-content/blogs.dir/1/files/2012/10/yazoo-dos-perros-ale2.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Sly Rye Porter",
+                        Brewery = "Yazoo Brewing Company",
+                        Description = "A rich, chocolaty English Porter with a clean finish. We use the finest floor-malted Maris Otter malts from England, the same malts used for the best single-malt scotch. A portion of malted rye gives a spicy, slightly dry finish.",
+                        Type = "English Porter",
+                        ABV = 5.7,
+                        IBU = 28,
+                        Image = "http://www.alereview.com/wp-content/uploads/2010/08/4880020103_932c1862dd_o-e1364414267566-224x300.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Hefeweizen",
+                        Brewery = "Yazoo Brewing Company",
+                        Description = "An authentic example of a Bavarian Hefeweizen. “Hefe” means cloudy or yeasty and “weizen” means wheat. This beer is made with mostly wheat and uses a true Hefeweizen yeast that gives it a fruity, banana aroma with just a hint of cloves. The tart finish makes this the perfect summer beer.",
+                        Type = "Hefeweizen",
+                        ABV = 5.0,
+                        IBU = 13,
+                        Image = "http://www.jbspourhouse.com/wp-content/uploads/2014/07/hefeweizen.png"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Thunder Ann",
+                        Brewery = "Jackalope Brewing Company",
+                        Description = "Thunder Ann came about after a massive google search trying to come up with a name that we thought could represent our American Pale Ale. That’s how we found out about a little lady name Sally Ann Thunder Ann Whirlwind Crockett. She was Davy Crockett’s wife (well, in the folklore, according to Wikipedia, he married someone named Mary) and she was a bad ass. Seriously. Look her up. We mulled it over and thought that Thunder Ann could also be a pretty great name for a beer.",
+                        Type = "American Pale Ale",
+                        ABV = 5.5,
+                        IBU = 37,
+                        Image = "https://pbs.twimg.com/media/BtQy0FpIQAAKNot.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Bearwalker Maple Brown Ale",
+                        Brewery = "Jackalope Brewing Company",
+                        Description = "Bearwalker was inspired by our brewmaster Bailey’s Vermont roots. Pure maple syrup is infused during the conditioning phase, and is noticeable from start to finish. Chocolate malts add roasted notes to the flavor and aroma. It is also more highly hopped than most browns to create a balanced, yet complex brew.",
+                        Type = "American Brown Ale",
+                        ABV = 5.1,
+                        IBU = 32,
+                        Image = "http://jackalopebrew.com/new/wp-content/uploads/2013/11/bearwalker-web-205x412.png"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Rompo Red Rye Ale",
+                        Brewery = "Jackalope Brewing Company",
+                        Description = "Rompo is a twist on an Irish red, using classic earthy UK hops and caramel malts. We gave it our own Tennessee take by adding flaked rye to the mash. Rompo is a very smooth drinking brew with notes of fruit and caramel, while the rye contributes a spicy and clean finish.",
+                        Type = "Rye Beer / Red Ale",
+                        ABV = 5.6,
+                        IBU = 22,
+                        Image = "http://beerstreetjournal.com/wp-content/uploads/Jackalope-Rompo.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Peanut Butter Milk Stout",
+                        Brewery = "TailGate Beer",
+                        Description = "Becoming a cult classic in, Nashville, the PBMS is a full bodied, velvety smooth Milk Stout. After fermentation is complete, we add peanut butter flavor to the beer. Giving just enough of that recognizable peanut butter flavor and aroma, but still maintaing a delicious, approachable Milk Stout.",
+                        Type = "Milk / Sweet Stout",
+                        ABV = 5.8,
+                        IBU = 33,
+                        Image = "http://www.camrgb.org/wp-content/uploads/2016/08/Peanut-Butter-Milk-Stout-300x300.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Homestyle",
+                        Brewery = "Bearded Iris Brewing",
+                        Description = "A soft, juicy IPA brewed with oats, and hopped singularly and intensely with Mosaic.",
+                        Type = "American IPA",
+                        ABV = 6.0,
+                        IBU = 0,
+                        Image = "http://www.lexbeerscene.com/images/blogs/03122017A.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Ruby Red American Ale",
+                        Brewery = "Fat Bottom Brewing Co.",
+                        Description = "Our flagship brew is a delicious red ale with a blend of rich, specialty malts that have been carefully chosen by our brewmaster, ensuring a robust flavor, without being overbearing. She’s perfectly balanced, and a real crowd pleaser! ",
+                        Type = "American Amber / Red Ale",
+                        ABV = 5.3,
+                        IBU = 35,
+                        Image = "https://i.pinimg.com/736x/fa/c6/7f/fac67f7fd17e1ada3601cb8d9797e0cb--ruby-red-craft-beer.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Miro Miel",
+                        Brewery = "East Nashville Beer Works",
+                        Description = "American Style Blonde Ale brewed with Pilsner malt and locally sourced honey. Gives a nice crisp, malty finish, refreshing and light brew.",
+                        Type = "American Blonde Ale",
+                        ABV = 5.1,
+                        IBU = 15,
+                        Image = "http://lanadelbeer.weebly.com/uploads/3/9/8/5/39850313/published/miro.jpeg?1486130019"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Le Freak",
+                        Brewery = "Green Flash Brewing Co.",
+                        Description = "Le Freak is the first-ever hybrid ale of its kind: the convergence of a Belgian-Style Trippel with an American Imperial IPA. This zesty Amarillo dry-hopped, bottle-conditioned marvel entices with fruity Belgian yeast aromatics and a firm, dry finish. Aromas of orange and passion fruit with sweet bready malts, and flavors of orange marmalade and citrus fruit pith. Experience a legendary beer.",
+                        Type = "Belgian IPA",
+                        ABV = 9.2,
+                        IBU = 101,
+                        Image = "https://constructiveconsumption.files.wordpress.com/2014/02/green-flash-le-freak.jpg?w=670"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Brown Shugga'",
+                        Brewery = "Lagunitas Brewing Company",
+                        Description = "Originally a failed attempt at a 1997 batch of Olde GnarlyWine Ale resulting in an all-new-beer-style we like to call…Irresponsible.",
+                        Type = "American Strong Ale",
+                        ABV = 9.8,
+                        IBU = 51,
+                        Image = "https://constructiveconsumption.files.wordpress.com/2014/02/lagunitas-brown-shugga.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Dawn of the Red",
+                        Brewery = "Ninkasi Brewing Company",
+                        Description = "Bursting with tropical notes, this Red IPA captures the bright complexity of El Dorado and Mosaic hops. An assertive hop presence is carried by a subtle caramel backbone, unearthing a beer that is flavorful and juicy.",
+                        Type = "Red IPA",
+                        ABV = 7.0,
+                        IBU = 66,
+                        Image = "http://nepascene.com/wp-content/uploads/2015/06/Ninkasi-Dawn-of-the-Red.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Total Domination IPA",
+                        Brewery = "Ninkasi Brewing Company",
+                        Description = "This decidedly balanced Northwest IPA celebrates our love of hops. A delightful blend of citrus and floral hop notes dominate the senses while a trio of malt adds a clean finish. Totally hoppy, totally drinkable; the name says it all.",
+                        Type = "American IPA",
+                        ABV = 6.7,
+                        IBU = 81,
+                        Image = "https://i.pinimg.com/736x/54/b2/fa/54b2fa713091ee25fb523d7cf1ea8ae9--best-beer-ipa.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Trippel Belgian Style Ale",
+                        Brewery = "New Belgium Brewing",
+                        Description = "Brewed with Pilsner and Munich malts, Trippel is classically smooth and complex, and sings with a high-note of sweet citrus before a pleasantly dry finish delivers a warm, strong boozy bite. Give Trippel a sip to get you smiling.",
+                        Type = "Tripel",
+                        ABV = 8.5,
+                        IBU = 43,
+                        Image = "http://wichitabeer.com/yahoo_site_admin/assets/images/NB_Trippel.19894446_std.png"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Abbey Belgian Style Ale",
+                        Brewery = "New Belgium Brewing",
+                        Description = "This garnet brown hued Belgian-style dubbel is strong on character and rich in flavor. Seven malts, including caramel Munich and chocolate, and a definitive Belgian yeast, waft off sweet, spicy aromas. Rich tones of chocolate and dark caramel mix with nuanced dried cherries, burnt sugar and figs. Sweet and roasty upfront, followed by a slightly bitter finish, Abbey is a lovely representation of the monastic beers of Belgium. Sip Abbey, and sip New Belgium’s tradition.",
+                        Type = "Belgian Dubbel",
+                        ABV = 7.0,
+                        IBU = 20,
+                        Image = "http://wichitabeer.com/yahoo_site_admin/assets/images/NB_Abbey.19894403_std.png"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "1554",
+                        Brewery = "New Belgium Brewing Company",
+                        Description = "Born of a flood and centuries-old Belgian text, 1554 Enlightened Black Ale uses a light lager yeast strain and dark chocolaty malts to redefine what dark beer can be. In 1997, a Fort Collins flood destroyed the original recipe our researcher, Phil Benstein, found in the library. So Phil and brewmaster, Peter Bouckaert, traveled to Belgium to retrieve this unique style lost to the ages. Their first challenge was deciphering antiquated script and outdated units of measurement, but trial and error (and many months of in-house sampling) culminated in 1554, a highly quaffable dark beer with a moderate body and mouthfeel.",
+                        Type = "Euro Dark / Black Lager",
+                        ABV = 5.6,
+                        IBU = 21,
+                        Image = "https://i.pinimg.com/236x/d5/44/7b/d5447b7d46224e75af01fdedb2d5d243--light-beer-drank.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Overcast Espresso Stout",
+                        Brewery = "Oakshire Brewing",
+                        Description = "Overcast Espresso Stout is a dark, silky stout brewed with beans from a local Eugene coffee roaster. Rich, smooth and full of coffee flavor and aroma, this beer is quite nice on a gray or sunny day!",
+                        Type = "American Stout",
+                        ABV = 5.8,
+                        IBU = 37,
+                        Image = "https://i.pinimg.com/236x/92/c9/19/92c919b9e380afaba5afa907e3685d9e.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Oakshire Amber Ale",
+                        Brewery = "Oakshire Brewing",
+                        Description = "Originally homebrewed by Oakshire’s founders Jeff & Chris Althouse, our amber is an outstanding and versatile ale that is traditionally crafted with the highest quality ingredients. This American Amber Ale is brewed with 60 and 120 lovibond crystal malts, chocolate and roasted barley malts. This malt driven ale derives hop character from a first wort addition of crystal hops as well as flavor and aroma additions from Crystal and Cascade. A small amount of bitterness balances the malt body providing a clean, dry finish.",
+                        Type = "American Amber / Red Ale",
+                        ABV = 5.4,
+                        IBU = 24,
+                        Image = "https://i.pinimg.com/564x/7b/fa/94/7bfa94712fb20e92d7f4d40e7ae876b2.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Moo-Hoo Chocolate Milk Stout",
+                        Brewery = "Terrapin Beer Company",
+                        Description = "The Terrapin “Moo-Hoo” Chocolate Milk Stout proudly uses cocoa nibs and shells from Olive and Sinclair Chocolate Company to give this beer its great taste!",
+                        Type = "Milk / Sweet Stout",
+                        ABV = 6.0,
+                        IBU = 30,
+                        Image = "http://draftmag.com/file/beers/Terrapin_Moo-Hoo_2014-2.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "W-n-B Coffee Oatmeal Imperial Stout",
+                        Brewery = "Terrapin Beer Company",
+                        Description = "Black as night, this coffee stout is thick, rich and full of real coffee flavor. Brewed with a special blend of beans from all over the world developed and roasted specifically for Terrapin by our friends at Jittery Joe’s Coffee right here in Athens, Ga. This unique blend of coffee produces a robust and flavorful beer that will leave you asking why not beer for breakfast!",
+                        Type = "American Double / Imperial Stout",
+                        ABV = 9.4,
+                        IBU = 50,
+                        Image = "http://cdn.pastemagazine.com/www/articles/terrapin%20wake%20and%20bake%20%28Custom%29.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Hopsecutioner",
+                        Brewery = "Terrapin Beer Company",
+                        Description = "This Killer IPA earns its name by using six different types of hops while still remaining an aggressive well balanced beer.",
+                        Type = "American IPA",
+                        ABV = 7.3,
+                        IBU = 71,
+                        Image = "https://cdn.pastemagazine.com/www/system/images/photo_albums/ipa-tasting-2015/large/terrapin-hopsecutioner.jpg?1384968217"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Sweetwater 420 Extra Pale Ale",
+                        Brewery = "SweetWater Brewing Company",
+                        Description = "SweetWater 420 Extra Pale Ale, our most popular brew, is a tasty West Coast Style Pale Ale with a stimulating hop character and a crisp finish.",
+                        Type = "American Pale Ale",
+                        ABV = 5.4,
+                        IBU = 41,
+                        Image = "http://www.beveragejournalinc.com/new/images/easyblog_shared/SweetWaterWEB.jpg"
+                    },
+                                       
+                    new Beer()
+                    {
+                        Name = "Sweetwater Blue",
+                        Brewery = "SweetWater Brewing Company",
+                        Description = "Sweetwater Blue is a unique light bodied ale enhanced with a hint of fresh blueberries. This euphoric experience begins with an appealing blueberry aroma and finishes as a surprisingly thirst-quenching ale.",
+                        Type = "Fruit Beer",
+                        ABV = 4.6,
+                        IBU = 10,
+                        Image = "https://i.pinimg.com/736x/1a/23/f3/1a23f35dd125589b09da79fa316791f2--medium-blue.jpg"
+                    },
                 };
                 foreach(Beer b in beer)
                 {

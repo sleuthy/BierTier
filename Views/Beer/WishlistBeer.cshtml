@@ -1,31 +1,29 @@
 @model IEnumerable<BierTier.Models.WishlistBeer>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "WishlistBeer";
 }
 
-<h2>Index</h2>
+<h2>My Wishlist</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IndivBeer)
+            <th>Beer
             </th>
-            <th></th>
+            <th>Brewery</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.IndivBeer.BeerId)
+                @Html.DisplayFor(modelItem => item.IndivBeer.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.WishListBeerId">Edit</a> |
+                @Html.DisplayFor(modelItem => item.IndivBeer.Brewery)
+            </td>
+            <td>
                 <a asp-action="Details" asp-route-id="@item.WishListBeerId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.WishListBeerId">Delete</a>
             </td>

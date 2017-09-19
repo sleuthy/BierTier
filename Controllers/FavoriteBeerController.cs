@@ -7,18 +7,23 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BierTier.Data;
 using BierTier.Models;
+using Microsoft.AspNetCore.Identity;
 
-namespace biertier.Controllers
+namespace BierTier.Controllers
 {
     public class FavoriteBeerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public FavoriteBeerController(ApplicationDbContext context)
+        public FavoriteBeerController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;    
         }
 
+        private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
+        
         // GET: FavoriteBeer
         public async Task<IActionResult> Index()
         {
