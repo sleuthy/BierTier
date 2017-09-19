@@ -25,7 +25,12 @@
             </td>
             <td>
                 <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-md resultsbutton">Details</a></p>
-                <a asp-action="Delete" asp-route-id="@item.WishListBeerId">Delete</a>
+                <form asp-action="DeleteWishlist">
+                    <div class="form-actions no-color">
+                    <input type="submit" value="Remove from Wishlist" class="btn btn-default btn-sm btn-danger" />
+                    <input type="hidden" name="Id" value="@item.WishListBeerId" />
+                    </div>
+                </form>
             </td>
         </tr>
 }
