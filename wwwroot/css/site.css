@@ -1,22 +1,23 @@
 ﻿body {
     background-image: url("../images/snow-restaurant-mountains-sky.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: #fff;
     height: 100vh;
 }
 
+.findtext {
+    color: white;
+}
+
 h1 {
-    color: lightgrey;
+    color: white;
 }
 
 input {
     width: 100%;
     color: darkslategrey;
-}
-
-btn-primary.raised {
-	box-shadow: 0 3px 0 0 #007299;
 }
 
 .transparentnav {
@@ -26,7 +27,11 @@ btn-primary.raised {
     font-weight: bolder;
 }
 
-.resultsbutton {
+.similarbutton {
+    box-shadow: 0 3px 0 0 #007299;
+    padding: 10px 10px;
+}
+.addbuttons {
     padding: 10px 10px;
 }
 

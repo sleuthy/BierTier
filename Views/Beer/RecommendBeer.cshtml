@@ -1,21 +1,12 @@
-@model BierTier.Models.AppViewModels.FavOrWishBeerViewModel
+@model BierTier.Models.AppViewModels.RecommendBeerViewModel
 
 @{
-    ViewData["Title"] = "Search";
+    ViewData["Title"] = "RecommendBeer";
 }
-<!-- Search logic in BeerController.cs -->
-<h3 class="findtext">Find a beer.</h3>
-<br>
 
-@using (Html.BeginForm())
-{
-    @Html.TextBox("SearchString")
-    <div class="input-group input-group-lg">
-        <br>
-        <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" class="btn btn-info btn-lg" value="Search" />
-    </div>
-}
-<br>
+<!-- Recommend Logic in BeerController.cs -->
+
+<h3>Similar Beers</h3>
 
 @if(Model.Beers.Count() > 0)
 {
@@ -55,13 +46,9 @@
             </td>
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post">
-                <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary addbuttons">
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
-            </form>
-            <form asp-controller="Beer" asp-action="RecommendBeer" method="post">
-                <input type="hidden" name="recommendString" value="@item.Type" />
-                <input type="submit" value="See Similar Beers!" class="btn btn-primary similarbutton">
+                <input type="hidden" asp-for="@Model.BeerToRecommendId" value="@item.BeerId" />
+                <input type="submit"  asp-for="@Model.BeerRecommend" value="Add to Favorites" class="btn btn-primary addbuttons">
+                <input type="submit"  asp-for="@Model.BeerRecommend" value="Add to Wishlist" class="btn btn-primary addbuttons">
             </form>
             </td>
         </tr> 
@@ -72,5 +59,5 @@
 
 else
 {
-    <h4>No matching beers found.</h4>
+    <h4>No similar beers found.</h4>
 }

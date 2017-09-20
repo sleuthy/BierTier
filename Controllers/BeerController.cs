@@ -229,10 +229,24 @@ namespace BierTier.Controllers
     
             if (!String.IsNullOrEmpty(searchString))
                 {
-                    viewModel.Beers = viewModel.Beers.Where(b => b.Name.Contains(searchString)
-                                        || b.Brewery.Contains(searchString)
-                                        || b.Type.Contains(searchString)).ToList();
+                    viewModel.Beers = viewModel.Beers.Where(b => b.Name.ToLower().Contains(searchString.ToLower())
+                                        || b.Brewery.ToLower().Contains(searchString.ToLower())
+                                        || b.Type.ToLower().Contains(searchString.ToLower())).ToList();
                 }
+
+            return View(viewModel);
+        }
+
+        // Beer Recommendations Functionality
+
+        [ActionName("RecommendBeer")]
+        public async Task<IActionResult> RecommendBeer(string recommendString)
+        {
+            RecommendBeerViewModel viewModel = new RecommendBeerViewModel();
+            
+            var id = await GetCurrentUserAsync();
+
+            viewModel.Beers = _context.Beer.Where(b => b.Type.Contains(recommendString)).ToList();
 
             return View(viewModel);
         }
