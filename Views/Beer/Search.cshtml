@@ -60,8 +60,8 @@
                 <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
             </form>
             <form asp-controller="Beer" asp-action="RecommendBeer" method="post">
-                <input type="hidden" asp-form="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit" asp-for="@Model.BeerChoice" value="See Similar Beers!" class="btn btn-primary similarbutton">
+                <input type="hidden" name="recommendString" value="@item.Type" />
+                <input type="submit" value="See Similar Beers!" class="btn btn-primary similarbutton">
             </form>
             </td>
         </tr> 

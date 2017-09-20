@@ -46,9 +46,9 @@
             </td>
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post">
-                <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary addbuttons">
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
+                <input type="hidden" asp-for="@Model.BeerToRecommendId" value="@item.BeerId" />
+                <input type="submit"  asp-for="@Model.BeerRecommend" value="Add to Favorites" class="btn btn-primary addbuttons">
+                <input type="submit"  asp-for="@Model.BeerRecommend" value="Add to Wishlist" class="btn btn-primary addbuttons">
             </form>
             </td>
         </tr> 
