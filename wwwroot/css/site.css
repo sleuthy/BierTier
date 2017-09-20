@@ -1,6 +1,7 @@
 ﻿body {
     background-image: url("../images/snow-restaurant-mountains-sky.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: #fff;
     height: 100vh;
@@ -11,7 +12,7 @@
 }
 
 h1 {
-    color: lightgrey;
+    color: white;
 }
 
 input {
