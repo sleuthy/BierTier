@@ -1,7 +1,63 @@
-@model IEnumerable<BierTier.Models.Beer>
+@model BierTier.Models.AppViewModels.RecommendBeerViewModel
 
 @{
     ViewData["Title"] = "RecommendBeer";
 }
 
-<h2>Similar Beers</h2>
+<!-- Recommend Logic in BeerController.cs -->
+
+<h3>Similar Beers</h3>
+
+@if(Model.Beers.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Brewery
+                    </th>
+                    <th>
+                        Type
+                    </th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.Beers) 
+        {
+        <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Image)" img class="img-responsive" height=150 width=100/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brewery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-md resultsbutton">Details</a></p>
+            </td>
+            <td>
+            <form asp-controller="Beer" asp-action="SaveBeer" method="post">
+                <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary addbuttons">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
+            </form>
+            </td>
+        </tr> 
+        }
+    </tbody>
+</table>
+}
+
+else
+{
+    <h4>No similar beers found.</h4>
+}

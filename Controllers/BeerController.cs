@@ -238,10 +238,18 @@ namespace BierTier.Controllers
         }
 
         // Beer Recommendations Functionality
-        // [ActionName("RecommendBeer")]
-        // public async Task<IActionResult> Recommend(string recommendString)
-        // {
-        //     if ()
-        // }
+
+        [ActionName("RecommendBeer")]
+        public async Task<IActionResult> RecommendButton(string recommendString)
+        {
+            RecommendBeerViewModel viewModel = new RecommendBeerViewModel();
+            viewModel.Beers = (from b in _context.Beer
+                            select b).ToList();
+            
+            var id = await GetCurrentUserAsync();
+
+            viewModel.Beers = viewModel.Beers.Where(b => b.Type.Contains(recommendString))
+
+        }
     }
 }
