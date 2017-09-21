@@ -5,23 +5,31 @@
     background-repeat: no-repeat;
     background-color: #fff;
     height: 100vh;
+    margin: auto;
 }
-
 
 .findtext {
     color: white;
 }
 
+.searchbutton {
+    width: 25%;
+}
+
 h1,
-h2,
-h3 {
+h2 {
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
-    width: 100%;
     color: darkslategrey;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .transparentnav {
     background: transparent;
@@ -30,27 +38,27 @@ input {
     font-weight: bolder;
 }
 
-a:hover,
-a:active {
-    color: #9d9d9d;
+.navbar-btn:hover{
+    color: darkslategrey;
+    text-decoration: none;
 }
 
 .similarbutton {
-    box-shadow: 0 3px 0 0 #007299;
     padding: 10px 10px;
+    margin: 10px 10px;
 }
 
 .addbuttons {
     padding: 10px 10px;
 }
 
-table {
+table,
+dl {
     margin: 30px;
     background-color: #ffffff;
-    /* border: 1px solid black; */
     opacity: 0.8;
     filter: alpha(opacity=60); /* For IE8 and earlier */
-    box-shadow: 3px 3px 3px #888888;
+    box-shadow: 2px 2px 2px #888888;
 }
 
 tr, 
@@ -61,12 +69,11 @@ td {
     color: #000000;
 }
 
-.main-container {
-    max-width: 500px;
-    height: 100px;
-    /* display: flex;
+.main-view,
+.searchboxes {
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 /* Wrapping element */
@@ -74,11 +81,11 @@ td {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 100px;
+    padding-top: 65px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input,
+/* input, */
 select,
 textarea {
     max-width: 280px;
