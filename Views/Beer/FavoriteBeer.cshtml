@@ -24,10 +24,13 @@
                 @Html.DisplayFor(modelItem => item.IndivBeer.Brewery)
             </td>
             <td>
+                <img src="@Html.DisplayFor(modelItem => item.IndivBeer.Image)" img class="img-responsive" height=150 width=100/>
+            </td>
+            <td>
                 <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-md resultsbutton">Details</a></p>
                 <form asp-action="DeleteFavorite">
                     <div class="form-actions no-color">
-                    <input type="submit" value="Remove from Favorites" class="btn btn-default btn-sm btn-danger" />
+                    <input type="submit" value="Delete" class="btn btn-default btn-sm btn-danger" />
                     <input type="hidden" name="Id" value="@item.FavoriteBeerId" />
                     </div>
                 </form>

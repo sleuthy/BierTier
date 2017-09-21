@@ -51,13 +51,13 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary addbuttons">Details</a></p>
+                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-sm addbuttons">Details</a></p>
             </td>
             <td>
-            <form asp-controller="Beer" asp-action="SaveBeer" method="post">
+            <form asp-controller="Beer" asp-action="SaveBeer" method="post" class="btn-group">
                 <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary addbuttons">
-                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary addbuttons">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Favorites" class="btn btn-primary btn-sm addbuttons">
+                <input type="submit"  asp-for="@Model.BeerChoice" value="Add to Wishlist" class="btn btn-primary btn-sm addbuttons">
             </form>
             <form asp-controller="Beer" asp-action="RecommendBeer" method="post">
                 <input type="hidden" name="recommendString" value="@item.Type" />
