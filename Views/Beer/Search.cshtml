@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.TextBox("SearchString")
-    <div class="input-group input-group-lg">
+    <div class="input-group input-group-lg searchboxes">
         <br>
         <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" class="btn btn-info btn-lg" value="Search" />
     </div>
