@@ -21,16 +21,6 @@ namespace BierTier.Data
 
                 var beer = new Beer []
                 {
-                    new Beer()
-                    {
-                        Name = "Bearwalker",
-                        Brewery = "Jackalope",
-                        Description = "Bearwalker was inspired by our brewmaster Bailey’s Vermont roots. Pure maple syrup is infused during the conditioning phase, and is noticeable from start to finish. Chocolate malts add roasted notes to the flavor and aroma. It is also more highly hopped than most browns to create a balanced, yet complex brew.",
-                        Type = "Maple Brown",
-                        ABV = 5.1,
-                        IBU = 32,
-                        Image = "http://jackalopebrew.com/new/wp-content/uploads/2013/11/bearwalker-web.png"
-                    },
 
                     new Beer()
                     {
@@ -40,7 +30,7 @@ namespace BierTier.Data
                         Type = "Double IPA",
                         ABV = 8.1,
                         IBU = 95,
-                        Image = "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_257984.jpg"
+                        Image = "http://4.bp.blogspot.com/-9VJs39WtF-M/UIQ9-_bDz9I/AAAAAAAAFXg/CUz03X3KE10/s1600/Green+Flash+West+Coast+IPA.JPG"
                        
                     },
                     
@@ -769,13 +759,167 @@ namespace BierTier.Data
                         IBU = 10,
                         Image = "https://i.pinimg.com/736x/1a/23/f3/1a23f35dd125589b09da79fa316791f2--medium-blue.jpg"
                     },
+
+                    new Beer()
+                    {
+                        Name = "Red Handed",
+                        Brewery = "Bearded Iris Brewing",
+                        Description = "Double IPA w/ Amarillo, Simcoe, Citra, & Chinook, hits the glass bursting with a dankness and pithy citrus peel, conjuring up images of pulpy fruit juices. Traces of pine and sweeter tropical fruits linger in the background. On the tongue, this is a hop lover's dream, biting with grapefruit and orange rind that wavers very little. The aforementioned sweeter fruits, mango and guava primarily, provide a bit of balance before a resinous pine and dank herb return to strafe the taste buds with bitterness. The alcohol is virtually undetectable, making this entirely too easy to drink. So good, and a worthy adversary to the ridiculously hyped New England IPAs.",
+                        Type = "American Double / Imperial IPA",
+                        ABV = 7.5,
+                        IBU = 0,
+                        Image = "http://www.lexbeerscene.com/images/blogs/03052017.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Scatterbrain",
+                        Brewery = "Bearded Iris Brewing",
+                        Description = "This hazy Simcoe IPA is bursting with aromas of passionfruit and pine.",
+                        Type = "American IPA",
+                        ABV = 6,
+                        IBU = 0,
+                        Image = "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/16463952_1828189970769776_5417553476659970048_n.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Otra Vez",
+                        Brewery = "Sierra Nevada",
+                        Description = "n our search for the perfect warm weather beer, we wanted something light bodied and thirst quenching, yet filled with complex and interesting flavors. We stumbled across the fruit of the prickly pear cactus, native to California. This tangy fruit is a great complement to the tart and refreshing traditional gose style beer. Otra Vez combines prickly pear cactus with a hint of grapefruit for a refreshing beer that will have you calling for round after round. Otra Vez!",
+                        Type = "Gose",
+                        ABV = 4.5,
+                        IBU = 5,
+                        Image = "https://www.cdn.sierranevada.com/sites/www.sierranevada.com/files/content/beers/otra-vez/otravez-bottle-pint2016.png"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Boddingtons Pub Ale",
+                        Brewery = "Boddingtons Brewery",
+                        Description = "Boddingtons is a medium-bodied English pale ale renowned for its golden color, distinctive creamy head, smooth body and easy drinking character.  It has a creamy, malty and slightly sweet flavor and features a clean, pleasant aftertaste.  In 1992, Boddingtons introduced the widget can and was one of the first beers to use this technology.  When Boddingtons is canned, the combination of the carbon dioxide and nitrogen needed to create the head of the beer is less than ideal.  The Draught Flow System inside of the widget can consists of a plastic, nitrogen-filled ball or widget that helps the carbon dioxide already dissolved in the beer form additional tiny bubbles.  This keeps the head stable and makes the beer as close to a draught brew as possible.",
+                        Type = "Extra Special / Strong Bitter / English Pale Ale",
+                        ABV = 4.6,
+                        IBU = 0,
+                        Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOj8vg45K-6IaCp1gI33khKTE4DVtih3Wc9miPpWGoolA68dD3"
+                    },
+
+                     new Beer()
+                    {
+                        Name = "Icelandic Arctic Pale Ale",
+                        Brewery = "Einstok Beer Company",
+                        Description = "Brewed 60 miles south of the Arctic Circle, we balance three kinds of hops with pure Icelandic water to create an ale unlike any other. It can only be described as an Arctic Pale Ale and it’s truly one of a kind. Cascade hops give it American character, while Northern Brewer and Hallertau Tradition add just enough bitterness to make this ale refreshingly Icelandic – and to make everything else pale in comparison.",
+                        Type = "Arctic Pale Ale",
+                        ABV = 5.6,
+                        IBU = 0,
+                        Image = "https://thehitchhikersguidetobeer.files.wordpress.com/2016/01/img_0067_crop.jpg?w=265&h=400"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Coffee Stout",
+                        Brewery = "Smith & Lentz Brewing",
+                        Description = "Smith & Lentz's coffee stout. Smooth.",
+                        Type = "Stout - American",
+                        ABV = 5.5,
+                        IBU = 0,
+                        Image = "https://www.alcoholprofessor.com/wp-content/uploads/2016/01/kevin-gibson-sl-porter-e1452611139726.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Runaway IPA",
+                        Brewery = "Renegade Brewing Company",
+                        Description = "This take on a classic west-coast style IPA will not disappoint. With citrus and grapfrit notes on the nose, you get a small amount of pine coming through on the back palate. With its burst of refreshing juicy hop flavor with a clean dry finish, this beer is sure to satisfy any hop head.",
+                        Type = "West Coast IPA",
+                        ABV = 6,
+                        IBU = 70,
+                        Image = "http://www.romancingthefoam.com/images/Beer/Renegade-Runaway-IPA-IMG_0425.gif"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Covfefe",
+                        Brewery = "Renegade Brewing Company",
+                        Description = "A happy accident provided us with this fruit forward, sessionable oat ale. An entirely different mishap gave us the inspiration for the name. Grab a pint of this easy drinking summer beer, and ask your bartender to tell you the story.",
+                        Type = "Oat Ale with Coffee / Golden Ale",
+                        ABV = 5.8,
+                        IBU = 41,
+                        Image = "https://s3-media4.fl.yelpcdn.com/bphoto/133grs1wGjCms9WtcGKtlQ/348s.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Depravity",
+                        Brewery = "Renegade Brewing Company",
+                        Description = "The tradition of this beer goes back to post-Halloween 2011 when Brian bought some discounted candy. He decided to throw a bunch of peanut butter cups into a small batch of milk stout to see what would happen. The beer was such a hit, he decided to brew a full batch for NEW YEAR’S EVE. That’s right folks every year this coveted brew is released on DECEMBER 31!  Depravity (formerly Black Gold) has been a tradition every since.  Each keg has 1 lb of Reese’s Peanut Butter Cups and 1 lb of dehydrated peanut butter.",
+                        Type = "Imperial Peanut Butter Cup Stout",
+                        ABV = 11,
+                        IBU = 57,
+                        Image = "http://i1077.photobucket.com/albums/w478/EvilDave60/Mobile%20Uploads/2017-03/75C6C0F3-5FA0-42E9-844F-43556F5C4600_zpsqleaw9ex.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Hammer & Sickle",
+                        Brewery = "Renegade Brewing Company",
+                        Description = "Bronze Medal Winner at the 2013 Great American Beer Festival, Hammer and Sickle is sure to leave an impression. This roasty stout has hints of vanilla, coffee, and dark chocolate. The high bitterness creates a dry finish on a beer that could otherwise be sweet and boozy. Hammer and Sickle is now packaged in 4-pack 12 ounce cans and will soon become dictators of your beer fridge.",
+                        Type = "Russian Imperial Stout",
+                        ABV = 9,
+                        IBU = 60,
+                        Image = "http://renegadebrewing.com/wp-content/uploads/2013/04/Hammer-and-Sickle-small-849x1024.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Retrograde Red",
+                        Brewery = "Falling Sky Brewing",
+                        Description = "A classic NW hoppy red that intermingles hops and malt with deftly balance. Fruity hops rotate with rich malts in the aroma while orbiting a drinkable inclination of toasted malt and earthy-spicy hop flavor. Take me to a moon already!",
+                        Type = "Red Ale / American Amber / Red",
+                        ABV = 6.3,
+                        IBU = 70,
+                        Image = "http://68.media.tumblr.com/46f619eb9bba7dc8d7f43b0a71578f2d/tumblr_inline_ojj6k2APvI1tovnkl_1280.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Alphadelic IPA",
+                        Brewery = "Hop Valley Brewing",
+                        Description = "You can run, but you can't hide from the hops in this true Northwest IPA. Pretty golden yellow and aromatic, this IPA is brewed by hop lovers for hop lovers.",
+                        Type = "American IPA",
+                        ABV = 7.2,
+                        IBU = 90,
+                        Image = "http://craftcans.com/cards/big_cards/hvalphadelic.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Freak of Nature",
+                        Brewery = "Wicked Weed Brewing",
+                        Description = "The Freak of Nature is our San Francisco inspired hoppy monster. At 8% abv and who knows how many ibu’s, this beer is our shrine to the Hop. Absurd amounts of the big West Coast hops gives this beer its citrusy, weedy nose and big, dank flavor. We dry hop with 48lbs per batch, which is over 3lbs of hops per barrel. In keeping with the classic style of the West Coast double, sugar plays a large part in creating this dry and minimally bitter double IPA. The Freak is particularly pintable for the style, so if you dare to enter, we welcome you to the Freak Show.",
+                        Type = "American Double / Imperial IPA",
+                        ABV = 8.5,
+                        IBU = 95,
+                        Image = "http://beerstreetjournal.com/wp-content/uploads/Wicked-Weed-Freak-of-Nature-bottle.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Monkeynaut IPA",
+                        Brewery = "Straight to Ale Brewing",
+                        Description = "Albert. Able. Gordo. Miss Baker. Bonny. Goliath. Between 1948 and 1961 these primate pioneers and others bravely went where no man had ever gone before, paving the way for manned U.S. spaceflight. This hoppy little monkey of a beer is a tribute to those Simian heroes of yesteryear. It has a citrusy, floral hop aroma, a strong malt body and a crisp finish.",
+                        Type = "American IPA",
+                        ABV = 7.25,
+                        IBU = 70,
+                        Image = "https://whatsinmycooler.files.wordpress.com/2014/04/monkeynaut.jpg"
+                    },
+
                 };
                 foreach(Beer b in beer)
                 {
                     context.Add(b);
                     context.SaveChanges();
                 }
-
             }
         }
     }
