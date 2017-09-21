@@ -3,21 +3,29 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="mainhomeview container-fluid">
-    <div class="main-container container">
-        <h1>Find your favorite beer.</h1><br>
+    <div class="main-view">
+        <h1>Find your favorite beer.</h1>
         <!-- Search input box-->
         <!-- Search by title, brewery, or type. Logic written in BeerController.cs-->
-            @using (Html.BeginForm())
-            {
-            @Html.TextBox("SearchString")
-                <span><p style="display:inline; color:lightgrey"><br></p>
-                </span><br>
-                <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" value="Search" button type="button" class="btn btn-primary btn-lg btn-block" />
-            }
     </div>
-</div>
+    <br>
+    <!-- <div class="searchboxes"> -->
+        
+            @using (Html.BeginForm())
+        {
+            <div class="row">
+            <div class="col-md-12 text-center">
+        @Html.TextBox("SearchString")
+                <!-- <span><p style="display:inline; color:lightgrey"><br></p>
+                </span><br> -->
+                </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+        <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" value="Search" placeholder="Search by name, brewery, or type." button type="submit" class="form-control btn btn-primary searchbutton" />
+                </div>
+                </div>
+        }
 
 
 

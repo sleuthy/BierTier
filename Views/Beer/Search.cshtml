@@ -10,9 +10,9 @@
 @using (Html.BeginForm())
 {
     @Html.TextBox("SearchString")
-    <div class="input-group input-group-lg">
+    <div class="input-group input-group-lg text-center">
         <br>
-        <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" class="btn btn-info btn-lg" value="Search" />
+        <input asp-area="" asp-controller="Beer" asp-action="Search" type="submit" class="form-control btn btn-primary searchbutton" value="Search" />
     </div>
 }
 <br>
@@ -51,7 +51,7 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-md resultsbutton">Details</a></p>
+                <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary addbuttons">Details</a></p>
             </td>
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post">
