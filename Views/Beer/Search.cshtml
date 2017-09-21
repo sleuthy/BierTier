@@ -24,7 +24,7 @@
             <tr>
                 <th></th>
                     <th>
-                        Name
+                        Beer
                     </th>
                     <th>
                         Brewery
@@ -42,7 +42,7 @@
                 <img src="@Html.DisplayFor(modelItem => item.Image)" img class="img-responsive" height=150 width=100/>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                <a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-info btn-sm addbuttons">@Html.DisplayFor(modelItem => item.Name)</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Brewery)
@@ -50,9 +50,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
-            <td>
+            <!-- <td>
                 <p><a asp-action="Details" asp-route-id="@item.BeerId" class="btn btn-primary btn-sm addbuttons">Details</a></p>
-            </td>
+            </td> -->
             <td>
             <form asp-controller="Beer" asp-action="SaveBeer" method="post" class="btn-group">
                 <input type="hidden" asp-for="@Model.BeerToSaveId" value="@item.BeerId" />
