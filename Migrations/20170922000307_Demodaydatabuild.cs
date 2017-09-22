@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace biertier.Migrations
 {
-    public partial class Lastone : Migration
+    public partial class Demodaydatabuild : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

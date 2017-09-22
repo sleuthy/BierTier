@@ -135,7 +135,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "KBS (Kentucky Breakfast Stout)",
+                        Name = "Kentucky Breakfast Stout",
                         Brewery = "Founders Breweing Company",
                         Description = "A bit of backwoods pleasure without the banjo. This strong stout is brewed with a hint of coffee and vanilla then aged in oak bourbon barrels. Our process ensures that strong bourbon undertones come through in the finish in every batch we brew. We recommend decanting at room temperature and best enjoyed in a brandy snifter.",
                         Type = "American Double / Imperial Stout",
@@ -179,7 +179,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "Sierra Nevada Pale Ale",
+                        Name = "Pale Ale",
                         Brewery = "Sierra Nevada Brewing Co.",
                         Description = "The beginning. A classic. Our most popular beer. Pale Ale began as a home brewer’s dream, grew into an icon, and inspired countless brewers to follow a passion of their own. Its unique piney and grapefruit aromas from the use of whole-cone American hops have fascinated beer drinkers for decades and made this beer a classic, yet it remains new, complex and surprising to thousands of beer drinkers every day. It is—as it always has been—all natural, bottle conditioned and refreshingly bold.",
                         Type = "American Pale Ale",
@@ -201,7 +201,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "Sierra Nevada Torpedo Extra IPA",
+                        Name = "Torpedo Extra IPA",
                         Brewery = "Sierra Nevada Brewing Co.",
                         Description = "Sierra Nevada Torpedo Ale is a big American IPA; bold, assertive and full of flavor and aromas highlighting the complex citrus, pine and herbal character of whole-cone American hops.",
                         Type = "American IPA",
@@ -234,7 +234,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "Lagunitas Sucks (Brown Shugga' Substitute Ale)",
+                        Name = "Lagunitas Sucks Brown Shugga' Substitute",
                         Brewery = "Lagunitas Brewing Company",
                         Description = "This beer is a 'cereal medley' of barley, rye, wheat, and oats. Full of complexishness from the 4 grains, then joyously dry-hopped for that big aroma and resinous flavor.",
                         Type = "American Double / Imperial IPA",
@@ -245,7 +245,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "Sierra Nevada Celebration Ale",
+                        Name = "Celebration Ale",
                         Brewery = "Sierra Nevada Brewing Company",
                         Description = "Sierra Nevada Celebration Ale represents a time honored tradition of brewing a special beer for the holiday season. There are generous portions of barley malts and fine whole hops of several varieties, creating a brew with a full, rich and hearty character.",
                         Type = "American IPA",
@@ -312,7 +312,7 @@ namespace BierTier.Data
                     new Beer()
                     {
                         Name = "Samuel Adams Boston Lager",
-                        Brewery = "Boston Beer Company (Samuel Adams)",
+                        Brewery = "Boston Beer Company Samuel Adams",
                         Description = "Samuel Adams Boston Lager helped lead the American beer revolution, reviving a passion for full-bodied brews that are robust and rich with character. Since 1984, Samuel Adams Boston Lager has used only the finest hand-selected ingredients to create this perfectly balanced, complex and full-bodied original brew.",
                         Type = "Vienna Lager",
                         ABV = 4.9,
@@ -366,7 +366,7 @@ namespace BierTier.Data
                    
                     new Beer()
                     {
-                        Name = "Stone Imperial Russian Stout",
+                        Name = "Imperial Russian Stout",
                         Brewery = "Stone Brewing",
                         Description = "Brewed in the authentic historical style of an Imperial Russian Stout, this ale is massive. Intensely aromatic (notes of anise, lack currants, coffee, roastiness and alcohol) and heavy on the palate, this brew goes where few can --- and fewer dare even try. The style originated from Czarist Russia's demand for ever thicker English stouts. Expect our version of this mysterious brew to pour like Siberian crude and taste even heavier!",
                         Type = "Russian Imperial Stout",
@@ -912,6 +912,39 @@ namespace BierTier.Data
                         ABV = 7.25,
                         IBU = 70,
                         Image = "https://whatsinmycooler.files.wordpress.com/2014/04/monkeynaut.jpg"
+                    },
+
+                    new Beer()
+                    {
+                        Name = "Space Dust IPA",
+                        Brewery = "Elysian Brewing",
+                        Description = "Space Dust, A Totally Nebular IPA. Great Western premium two-row, combined with c-15 and Dextri-Pils, give this beer a bright and galactic Milky Way hue. The hopping is pure starglow energy, with Chinook to bitter and late and dry additions of Citra and Amarillo. Space Dust is out of this world.",
+                        Type = "American Double / Imperial IPA",
+                        ABV = 8.2,
+                        IBU = 73,
+                        Image = "https://2.bp.blogspot.com/-gsUj3d-93Fg/WA_XNIdDURI/AAAAAAAAOUI/qfa3gnLZGzcd_VRfl2-Y1jv2cGYqbS9OQCLcB/s1600/Elysian%2BSpace%2BDust%2BIPA.jpg"
+                    },
+
+                    new Beer()      
+                    {
+                        Name = "Nashweizen",
+                        Brewery = "Tennessee Brew Works",
+                        Description = "Intonations of banana and clove on the nose and pallet finish with a tropical medley including melon, white grape and tangerine.",
+                        Type = "Hefeweizen",
+                        ABV = 5,
+                        IBU = 35,
+                        Image = "https://pbs.twimg.com/media/DFxdHF8VoAEeZ-w.jpg"
+                    },
+
+                    new Beer()      
+                    {
+                        Name = "Oktoberfest",
+                        Brewery = "Yee-Haw Brewing Company",
+                        Description = "A traditional, malty German amber lager, our Märzen Oktoberfest is one seasonal you won't want to miss. Munich malt is at the heart of this beer. You'll enjoy clean, rich and toasty flavors without sweetness thanks to an ever so slight hop bitterness. For your new fall favorite, just say...YEE-HAW!",
+                        Type = "Marzen",
+                        ABV = 5.7,
+                        IBU = 18,
+                        Image = "https://pbs.twimg.com/media/DJk3lenXoAE8Dsu.jpg"
                     },
 
                 };
